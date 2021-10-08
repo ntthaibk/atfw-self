@@ -1,0 +1,11 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="AspireTest" verbose="1">
+    <test verbose="1"
+          name="Aspire Automation Test"
+    >
+        <classes>
+            <class name="com.thaing.testsuite.LoginPageTest">
+            </class>
+        </classes>
+    </test>
+</suite>
