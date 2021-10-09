@@ -1,10 +1,10 @@
 package com.thaing.utils;
 
-import com.thaing.core.constant.Environment;
+import com.thaing.core.constant.EnvironmentConstant;
 
 public class TestUtils {
     private TestUtils() {
-        throw new IllegalStateException(Environment.UTILITY_CLASS_EXCEPTION);
+        throw new IllegalStateException(EnvironmentConstant.UTILITY_CLASS_EXCEPTION);
     }
 
 

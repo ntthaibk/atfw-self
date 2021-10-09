@@ -1,9 +1,11 @@
 package com.thaing.web.pages;
 
-import lombok.Data;
+public class LoginPage extends BasePage {
 
-@Data
-public class LoginPage {
-    
+
+    LoginPage() {
+        super();
+    }
+
 
 }
