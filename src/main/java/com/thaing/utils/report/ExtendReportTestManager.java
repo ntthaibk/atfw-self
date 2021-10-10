@@ -7,12 +7,11 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class ExtendReportTestManager {
-    public static ExtentTest test;
     static Map<Integer, ExtentTest> extentTestMap = new HashMap<Integer, ExtentTest>();
     static ExtentReports extent = ExtendReportManager.getInstance();
 
     public static synchronized ExtentTest getTest() {
-        return extentTestMap.get((int) Thread.currentThread().getId());
+        return (ExtentTest) extentTestMap.get((int) (long) (Thread.currentThread().getId()));
     }
 
     public static synchronized void endTest() {
@@ -20,8 +19,8 @@ public class ExtendReportTestManager {
     }
 
     public static synchronized ExtentTest startTest(String testName) {
-        test = extent.createTest(testName);
-        extentTestMap.put((int) Thread.currentThread().getId(), test);
+        ExtentTest test = extent.createTest(testName);
+        extentTestMap.put((int) (long) (Thread.currentThread().getId()), test);
         return test;
     }
 }

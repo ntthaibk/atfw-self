@@ -1,5 +1,5 @@
 package com.thaing.testsuite;
 
-public class LoginPageTest {
+public class LoginPageTest extends BaseTest {
 
 }

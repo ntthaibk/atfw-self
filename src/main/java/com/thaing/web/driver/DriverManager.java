@@ -1,17 +1,25 @@
 package com.thaing.web.driver;
 
-import lombok.Getter;
-import lombok.Setter;
 import org.openqa.selenium.WebDriver;
 
 public class DriverManager {
 
-    @Getter
-    @Setter
-    private WebDriver driver;
+    private static final ThreadLocal<WebDriver> driver = new ThreadLocal<>();
 
-    public void quitDriver() {
-        driver.quit();
+    private DriverManager() {
+    }
+
+    public static WebDriver getDriver() {
+        return driver.get();
+    }
+
+    public static void setDriver(WebDriver driver) {
+        DriverManager.driver.set(driver);
+    }
+
+    public static void quit() {
+        DriverManager.driver.get().quit();
+        driver.remove();
     }
 
 

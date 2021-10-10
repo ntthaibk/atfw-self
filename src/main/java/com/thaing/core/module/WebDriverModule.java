@@ -16,6 +16,6 @@ public class WebDriverModule extends AbstractModule {
 
     @Provides
     public WebDriver getDriver() {
-        return new DriverManager().getDriver();
+        return DriverManager.getDriver();
     }
 }
