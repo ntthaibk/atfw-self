@@ -1,4 +1,4 @@
-package com.thaing.unittest;
+package com.thaing.debug;
 
 import com.google.inject.Guice;
 import com.google.inject.Injector;

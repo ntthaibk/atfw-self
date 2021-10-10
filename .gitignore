@@ -27,3 +27,4 @@ usage.statistics.xml
 hs_err_pid*
 .idea/misc.xml
 *.html
+target/

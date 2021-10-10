@@ -3,6 +3,7 @@ package com.thaing.core.module;
 import com.google.inject.AbstractModule;
 import com.google.inject.Provides;
 import com.thaing.web.driver.DriverManager;
+import com.thaing.web.wait.Wait;
 import org.openqa.selenium.WebDriver;
 
 public class WebDriverModule extends AbstractModule {
@@ -17,5 +18,10 @@ public class WebDriverModule extends AbstractModule {
     @Provides
     public WebDriver getDriver() {
         return DriverManager.getDriver();
+    }
+
+    @Provides
+    public Wait getWait() {
+        return new Wait(DriverManager.getDriver());
     }
 }
