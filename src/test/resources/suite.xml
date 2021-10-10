@@ -1,8 +1,11 @@
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="AspireTest" verbose="1">
+    <listeners>
+        <listener class-name="com.thaing.listener.TestListener"/>
+    </listeners>
     <test verbose="1"
-          name="Aspire Automation Test"
-    >
+          name="Aspire Automation Test">
+
         <classes>
             <class name="com.thaing.testsuite.LoginPageTest">
             </class>
