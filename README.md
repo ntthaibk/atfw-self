@@ -23,7 +23,8 @@ A test framework dedicated for the Aspire Challenge Test to implement automation
 ## Features:
 - Web testing with Selenium + TestNG
 - Browser supported: Chrome, FireFox
-- TBD
+- Dependencies Injection with Guice
+- Report with Extent Report
 
 ## Getting Started
 
