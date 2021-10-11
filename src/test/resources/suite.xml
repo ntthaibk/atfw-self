@@ -5,9 +5,10 @@
     </listeners>
     <test verbose="1"
           name="Aspire Automation Test">
+        <parameter name="browserName" value="chrome"/>
 
         <classes>
-            <class name="com.thaing.testsuite.LoginPageTest">
+            <class name="com.thaing.testsuite.RegistrationTest">
             </class>
         </classes>
     </test>

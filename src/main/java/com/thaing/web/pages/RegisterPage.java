@@ -65,8 +65,6 @@ public class RegisterPage extends BasePage {
     public void verifyAccountRegisteredSuccessfully() {
         wait.waitForElementDisplay(screenContextText);
         Assert.assertEquals(screenContextText.getAttribute("innerText").trim(), RegisterPageConstant.REGISTER_SUCCESSFUL);
-
-
     }
 
     private void selectReferralDropDown(RegisterData data) {

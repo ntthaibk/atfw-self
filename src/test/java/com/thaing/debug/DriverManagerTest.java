@@ -15,6 +15,7 @@ import com.thaing.web.wait.Wait;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.testng.annotations.Listeners;
+import org.testng.annotations.Optional;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
@@ -22,7 +23,7 @@ import org.testng.annotations.Test;
 public class DriverManagerTest extends ServiceInjection {
     @Test
     @Parameters("browserName")
-    public void initDriverBasedOnBrowserName(String browserName) {
+    public void initDriverBasedOnBrowserName(@Optional("chrome") String browserName) {
         WebDriver driver = DriverFactory.createInstance(browserName, new DesiredCapabilities());
         DriverManager.setDriver(driver);
         Injector injector = Guice.createInjector(new WebDriverModule());

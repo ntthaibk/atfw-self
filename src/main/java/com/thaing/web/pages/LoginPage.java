@@ -19,8 +19,7 @@ public class LoginPage extends BasePage {
     public LoginPage(WebDriver driver) {
         super(driver);
     }
-
-
+    
     public void clickOnRegisterButton() {
         LogUtils.info("Click on Register button");
         wait.waitForElementClickable(registerButton);

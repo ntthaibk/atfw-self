@@ -33,6 +33,6 @@ public class PropertyUtils {
             e.printStackTrace();
         }
         webTimeout = Integer.valueOf(props.getProperty("web.timeout"));
-        autHomePage = props.getProperty("aut.homepage");
+        autHomePage = props.getProperty("aut.local");
     }
 }
