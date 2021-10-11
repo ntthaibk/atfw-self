@@ -12,8 +12,6 @@
       - [3.1. Run the TestNG instance:](#31-run-the-testng-instance)
       - [3.2. Run the Maven test command:](#32-run-the-maven-test-command)
     - [4. Test Creation:](#4-test-creation)
-  - [Aspire Challenge](#aspire-challenge)
-    - [Test Case](#test-case)
 
 
 ## Motivation
@@ -77,7 +75,8 @@ A test framework dedicated for the Aspire Challenge Test to implement automation
 - Initiate the test through the command like this
 
     ```shell
-    mvn clean test [suiteName] -D[params...]
+    mvn clean test -Dsuite=[suiteName] -D[params...]
+    //or left the param blank if you run with Chrome
     ```
 
 - where:
@@ -108,11 +107,3 @@ A test framework dedicated for the Aspire Challenge Test to implement automation
 
     ```
     - Adding test object and method and you are good to go
-
-
-## Aspire Challenge
-
-### Test Case
-|Steps   | Action  | Expected|
-|---|---|---|
-|   |   |   |
